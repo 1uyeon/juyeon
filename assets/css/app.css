@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Syncopate:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Departure Mono";
+  src: url("/assets/fonts/DepartureMono-Regular.woff2") format("woff2"), url("/assets/fonts/DepartureMono-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #1d1d1f;
+  overflow: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+::-moz-selection {
+  background-color: #789E61;
+  color: #FFF;
+}
+
+::selection {
+  background-color: #789E61;
+  color: #FFF;
+}
+
+h2 {
+  font-family: "Syncopate", sans-serif;
+  font-size: 3.125rem;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  z-index: 9999;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 1;
+}
+.loading.disable {
+  visibility: hidden;
+  opacity: 0;
+}
+.loading .load_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  font-family: "Departure Mono", sans-serif;
+  font-size: 16px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.loading .load_content img {
+  width: 70px;
+}
+
+.body-wrap {
+  margin: 0 auto;
+  max-width: 1920px;
+  overflow: hidden;
+}
+
+section {
+  padding: 7.5rem 2.5rem;
+}
+section.main-sec {
+  position: relative;
+  height: 100vh;
+}
+section.main-sec h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Syncopate", sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+section.main-sec h1 p {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section.main-sec h1 p span {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+section.main-sec h1 p span:hover {
+  -webkit-transform: translateY(-0.9375rem);
+          transform: translateY(-0.9375rem);
+}
+section.main-sec .tomato {
+  position: absolute;
+  width: 40%;
+  max-width: 200px;
+  bottom: 10%;
+  right: 5%;
+  opacity: 0.9;
+  -webkit-animation: load 1.2s linear infinite;
+          animation: load 1.2s linear infinite;
+}
+section.profile-sec {
+  background-color: aliceblue;
+}
+section.works-sec {
+  background-color: pink;
+}

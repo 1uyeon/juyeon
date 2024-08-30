@@ -1,0 +1,17 @@
+$device-width: 1920;
+$body-font-size: 16;
+
+@function ppr($px) {
+  $mobile-convert: $px / $body-font-size;
+  @return $mobile-convert + rem;
+}
+
+@function vw($px) {
+  $mobile-convert: $px / $device-width * 100;
+  @return $mobile-convert + vw;
+}
+
+@function vh($px) {
+  $mobile-convert: $px / $device-width * 100;
+  @return $convert + vh;
+}
