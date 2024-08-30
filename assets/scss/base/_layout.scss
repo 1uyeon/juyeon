@@ -4,6 +4,9 @@ html {
   color: $black;
   overflow: hidden;
 }
+body {
+  overflow: hidden;
+}
 * {
   box-sizing: border-box;
 }
@@ -58,7 +61,6 @@ h2 {
 .body-wrap {
   margin: 0 auto;
   max-width: 1920px; 
-  overflow: hidden;
 }
 
 section {
@@ -72,7 +74,7 @@ section {
       flex-direction: column;
       // font-family: 'Departure Mono', sans-serif;
       font-family: "Syncopate", sans-serif;
-      font-size: 120px;
+      font-size: ppr(140);
       font-weight: bold;
       line-height: 1.1;
       letter-spacing: -.05em;
@@ -92,11 +94,17 @@ section {
     .tomato {
       position: absolute;
       width: 40%;
-      max-width: 200px;
+      max-width: 300px;
       bottom: 10%;
       right: 5%;
       opacity: 0.9;
-      animation: load 1.2s linear infinite;
+      cursor: grab;
+      img {
+        pointer-events: none;
+      }
+      &:active {
+        cursor: grabbing;
+      }
     }
   }
   &.profile-sec {
@@ -106,22 +114,3 @@ section {
     background-color: pink;
   }
 }
-
-
-// @keyframes load {
-//   20% {
-//     transform: translatey(9px) rotate(72deg)
-//   }
-//   40% {
-//     transform: translatey(18px) scale(1, 0.9) rotate(144deg);
-//   }
-//   60% {
-//     transform: translatey(9px) rotate(216deg);
-//   }
-//   80% {
-//     transform: translatey(9px) rotate(288deg);
-//   }
-//   100% {
-//     transform: translatey(0px) rotate(365deg);
-//   }
-// }

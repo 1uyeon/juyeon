@@ -71,6 +71,10 @@ html {
   overflow: hidden;
 }
 
+body {
+  overflow: hidden;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -141,7 +145,6 @@ h2 {
 .body-wrap {
   margin: 0 auto;
   max-width: 1920px;
-  overflow: hidden;
 }
 
 section {
@@ -163,7 +166,7 @@ section.main-sec h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Syncopate", sans-serif;
-  font-size: 120px;
+  font-size: 8.75rem;
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: -0.05em;
@@ -187,12 +190,19 @@ section.main-sec h1 p span:hover {
 section.main-sec .tomato {
   position: absolute;
   width: 40%;
-  max-width: 200px;
+  max-width: 300px;
   bottom: 10%;
   right: 5%;
   opacity: 0.9;
-  -webkit-animation: load 1.2s linear infinite;
-          animation: load 1.2s linear infinite;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+section.main-sec .tomato img {
+  pointer-events: none;
+}
+section.main-sec .tomato:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 section.profile-sec {
   background-color: aliceblue;
