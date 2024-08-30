@@ -6,12 +6,16 @@ html {
 }
 body {
   overflow: hidden;
+  cursor: $cursor-d, auto;
 }
 * {
   box-sizing: border-box;
 }
 img {
   max-width: 100%;
+}
+button, a {
+  cursor: $cursor-p, auto
 }
 ::selection {
   background-color: $olive;
@@ -21,9 +25,15 @@ img {
 h2 {
   // font-family: 'Departure Mono', sans-serif;
   font-family: "Syncopate", sans-serif;
-  font-size: ppr(50);
+  font-size: max(ppr(80), 45px);
   font-weight: bold;
   letter-spacing: -.05em;
+}
+h3 {
+  font-size: max(ppr(45), 32px);
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .loading {
@@ -64,17 +74,18 @@ h2 {
 }
 
 section {
-  padding: ppr(120) ppr(40);
+  padding: ppr(120) ppr(80) ppr(60);
+  font-size: 22px;
   &.main-sec {
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     h1 {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       // font-family: 'Departure Mono', sans-serif;
       font-family: "Syncopate", sans-serif;
-      font-size: ppr(140);
+      font-size: max(ppr(160), 65px);
       font-weight: bold;
       line-height: 1.1;
       letter-spacing: -.05em;
@@ -83,34 +94,85 @@ section {
         position: relative;
         display: flex;
         span {
-          cursor: pointer;
+          cursor: $cursor-p, auto;
           transition: .3s ease-in-out;
           &:hover {
-            transform: translateY(ppr(-15));
+            transform: translateY(ppr(-15)) !important;
+          }
+          &::selection {
+            background-color: transparent;
+            color: $black;
           }
         }
       }
     }
     .tomato {
       position: absolute;
-      width: 40%;
-      max-width: 300px;
+      width: clamp(150px, 30%, 250px);
       bottom: 10%;
       right: 5%;
       opacity: 0.9;
-      cursor: grab;
+      cursor: $cursor-p, auto;
+      transition: .2s ease-in-out;
       img {
         pointer-events: none;
+        &::selection {
+          background-color: transparent;
+        }
       }
-      &:active {
-        cursor: grabbing;
+      &:hover {
+        transform: scale(1.1);
+        &::before {
+          content: '';
+          position: absolute;
+          top: -70px;
+          right: ppr(10);
+          width: 110px;
+          height: 63px;
+          background: url("/assets/img/hello.png") no-repeat;
+          background-size: cover;
+        }
+      }
+      &::selection {
+        background-color: transparent;
       }
     }
   }
   &.profile-sec {
-    background-color: aliceblue;
+    min-height: 100dvh;
+    font-weight: 500;
+    line-height: 1.3;
+    .profile-wrap {
+      h3 {
+        margin-bottom: ppr(24);
+      }
+      .date {
+        font-size: 18px;
+        font-weight: 400;
+        color: $gray;
+        white-space: nowrap;
+        padding-top: 3px;
+      }
+      div + div {
+        margin-top: ppr(80);
+      }
+      ul {
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 15px;
+          + li {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
   }
   &.works-sec {
     background-color: pink;
   }
+}
+
+.sec-con {
+  margin-top: ppr(80);
 }

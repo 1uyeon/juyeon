@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juyeon Lee</title>
 
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
     <!-- 파비콘 -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -14,35 +16,40 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="../assets/css/app.css">
-    <script src="/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/common.js"></script>
+    <!-- AOS 라이브러리 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/common.js"></script>
 </head>
 <body>
     <!-- 로딩화면 -->
-     <div class="loading">
+     <!-- <div class="loading">
         <div class="load_content">
-            <img src="/assets/img/Tomato_animated.gif" alt="tomato">
+            <img src="assets/img/Tomato_animated.gif" alt="tomato">
             loading ···
         </div>
-     </div>
+     </div> -->
     <!-- 로딩화면 끝 -->
     <div class="body-wrap">
         <section class="main-sec">
             <h1>
-                <p>
+                <p data-aos="fade-down" data-aos-delay="1500" data-aos-duration="600">
+                    <span>(</span>
                     <span>A</span>
                     <span>B</span>
                     <span>O</span>
                     <span>U</span>
                     <span>T</span>
+                    <span>)</span>
                 </p>
-                <p class="lee">
+                <p class="lee" data-aos="fade-down" data-aos-delay="2000" data-aos-duration="500"> 
                     <span>L</span>
                     <span>e</span>
                     <span>e</span>
                 </p>
-                <p>
+                <p data-aos="fade-down" data-aos-delay="2100" data-aos-duration="500">
                     <span>J</span>
                     <span>u</span>
                     <span>y</span>
@@ -52,11 +59,65 @@
                 </p>
             </h1>
             <div class="tomato" id="dragMe">
-                <img src="/assets/img/tomato.svg" alt="tomato">
+                <img src="assets/img/tomato.svg" alt="tomato">
             </div>
         </section>
         <section class="profile-sec">
             <h2>PROFILE</h2>
+            <div class="sec-con profile-wrap">
+                <div class="summary">
+                    공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~<br>
+                    자기소개란 예정 <br>
+                    공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~공사중~<br>
+                </div>
+                <div class="experience">
+                    <h3>경력</h3>
+                    <ul>
+                        <li>
+                            <span class="date">2022.04 ~ 재직 중</span>
+                            (주)어쩌구
+                        </li>
+                    </ul>
+                </div>
+                <div class="education">
+                    <h3>교육</h3>
+                    <ul>
+                        <li>
+                            <span class="date">2021. 06 ~ 2021. 11</span>
+                            이젠아카데미컴퓨터학원 UI/UX 반응형 웹디자인(웹퍼블리셔) 과정 수료
+                        </li>
+                        <li>
+                            <span class="date">2016. 03 ~ 2021. 02</span>
+                            국립강릉원주대학교 컴퓨터공학과 졸업 
+                        </li>
+                    </ul>
+                </div>
+                <div class="license">
+                    <h3>자격</h3>
+                    <ul>
+                        <li>
+                            <span class="date">2022. 04</span>
+                            웹디자인기능사
+                        </li>
+                        <li>
+                            <span class="date">2021. 09</span>
+                            GTQi(일러스트) 1급
+                        </li>
+                        <li>
+                            <span class="date">2021. 08</span>
+                            GTQ(포토샵) 1급
+                        </li>
+                        <li>
+                            <span class="date">2020. 08</span>
+                            컴퓨터활용능력 2급
+                        </li>
+                        <li>
+                            <span class="date">2019. 08</span>
+                            정보처리기사
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section class="works-sec">
             <h2>WORKS</h2>

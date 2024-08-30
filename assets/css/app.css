@@ -73,6 +73,7 @@ html {
 
 body {
   overflow: hidden;
+  cursor: url(/assets/img/cursor-default.svg), auto;
 }
 
 * {
@@ -82,6 +83,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+button, a {
+  cursor: url(/assets/img/cursor-pointer.svg), auto;
 }
 
 ::-moz-selection {
@@ -96,9 +101,16 @@ img {
 
 h2 {
   font-family: "Syncopate", sans-serif;
-  font-size: 3.125rem;
+  font-size: max(5rem, 45px);
   font-weight: bold;
   letter-spacing: -0.05em;
+}
+
+h3 {
+  font-size: max(2.8125rem, 32px);
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .loading {
@@ -148,11 +160,12 @@ h2 {
 }
 
 section {
-  padding: 7.5rem 2.5rem;
+  padding: 7.5rem 5rem 3.75rem;
+  font-size: 22px;
 }
 section.main-sec {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
 }
 section.main-sec h1 {
   display: -webkit-box;
@@ -166,7 +179,7 @@ section.main-sec h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Syncopate", sans-serif;
-  font-size: 8.75rem;
+  font-size: max(10rem, 65px);
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: -0.05em;
@@ -179,34 +192,95 @@ section.main-sec h1 p {
   display: flex;
 }
 section.main-sec h1 p span {
-  cursor: pointer;
+  cursor: url(/assets/img/cursor-pointer.svg), auto;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 section.main-sec h1 p span:hover {
-  -webkit-transform: translateY(-0.9375rem);
-          transform: translateY(-0.9375rem);
+  -webkit-transform: translateY(-0.9375rem) !important;
+          transform: translateY(-0.9375rem) !important;
+}
+section.main-sec h1 p span::-moz-selection {
+  background-color: transparent;
+  color: #1d1d1f;
+}
+section.main-sec h1 p span::selection {
+  background-color: transparent;
+  color: #1d1d1f;
 }
 section.main-sec .tomato {
   position: absolute;
-  width: 40%;
-  max-width: 300px;
+  width: clamp(150px, 30%, 250px);
   bottom: 10%;
   right: 5%;
   opacity: 0.9;
-  cursor: -webkit-grab;
-  cursor: grab;
+  cursor: url(/assets/img/cursor-pointer.svg), auto;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 section.main-sec .tomato img {
   pointer-events: none;
 }
-section.main-sec .tomato:active {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
+section.main-sec .tomato img::-moz-selection {
+  background-color: transparent;
+}
+section.main-sec .tomato img::selection {
+  background-color: transparent;
+}
+section.main-sec .tomato:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+section.main-sec .tomato:hover::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: 0.625rem;
+  width: 110px;
+  height: 63px;
+  background: url("/assets/img/hello.png") no-repeat;
+  background-size: cover;
+}
+section.main-sec .tomato::-moz-selection {
+  background-color: transparent;
+}
+section.main-sec .tomato::selection {
+  background-color: transparent;
 }
 section.profile-sec {
-  background-color: aliceblue;
+  min-height: 100dvh;
+  font-weight: 500;
+  line-height: 1.3;
+}
+section.profile-sec .profile-wrap h3 {
+  margin-bottom: 1.5rem;
+}
+section.profile-sec .profile-wrap .date {
+  font-size: 18px;
+  font-weight: 400;
+  color: #6e6e73;
+  white-space: nowrap;
+  padding-top: 3px;
+}
+section.profile-sec .profile-wrap div + div {
+  margin-top: 5rem;
+}
+section.profile-sec .profile-wrap ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 15px;
+}
+section.profile-sec .profile-wrap ul li + li {
+  margin-top: 20px;
 }
 section.works-sec {
   background-color: pink;
+}
+
+.sec-con {
+  margin-top: 5rem;
 }
