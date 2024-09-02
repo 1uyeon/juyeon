@@ -56,7 +56,7 @@ table {
 
 @font-face {
   font-family: "Departure Mono";
-  src: url("/assets/fonts/DepartureMono-Regular.woff2") format("woff2"), url("/assets/fonts/DepartureMono-Regular.woff") format("woff");
+  src: url("../fonts/DepartureMono-Regular.woff2") format("woff2"), url("../fonts/DepartureMono-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "DungGeunMo";
@@ -238,7 +238,7 @@ section.main-sec .tomato:hover::before {
   right: 0.625rem;
   width: 110px;
   height: 63px;
-  background: url("/assets/img/hello.png") no-repeat;
+  background: url("../img/hello.png") no-repeat;
   background-size: cover;
 }
 section.main-sec .tomato::-moz-selection {
