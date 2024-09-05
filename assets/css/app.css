@@ -156,6 +156,7 @@ h3 {
 
 .body-wrap {
   margin: 0 auto;
+  padding: 0 0 120px;
   max-width: 1920px;
 }
 
@@ -277,8 +278,95 @@ section.profile-sec .profile-wrap ul li {
 section.profile-sec .profile-wrap ul li + li {
   margin-top: 20px;
 }
-section.works-sec {
-  background-color: pink;
+section.works-sec .work-con .project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+section.works-sec .work-con .project .box {
+  border-radius: 18px;
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
+  cursor: url(../img/cursor-pointer.svg), auto;
+}
+section.works-sec .work-con .project .box:hover {
+  -webkit-box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.34);
+          box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.34);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+section.works-sec .work-con .project .box .thumnail {
+  border-bottom: 1px solid #D3D3D3;
+}
+section.works-sec .work-con .project .box .box-info {
+  padding: 1.875rem;
+}
+section.works-sec .work-con .project .box .box-info .name {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+section.works-sec .work-con .project .box .box-info .summary li {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+section.works-sec .work-con .project .box .box-info .summary li + li {
+  margin-top: 8px;
+}
+section.works-sec .work-con .project .box .box-info .summary li.date {
+  font-size: 16px;
+  color: #6e6e73;
+  font-weight: 400;
+}
+section.works-sec .work-con .project .box .box-info .tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+section.works-sec .work-con .project .box .box-info .tag span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+section.works-sec .work-con .project .box .box-info .tag span.red {
+  background-color: #FFDCDC;
+}
+section.works-sec .work-con .project .box .box-info .tag span.green {
+  background-color: #DBEDDB;
+}
+section.contact-sec .contact-con ul {
+  position: relative;
+  padding-left: 40px;
+}
+section.contact-sec .contact-con ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 5px;
+  height: 100%;
+  background-color: #1d1d1f;
+}
+section.contact-sec .contact-con ul li {
+  line-height: 1.8;
+}
+section.contact-sec .contact-con ul li.bold {
+  font-weight: bold;
 }
 
 .sec-con {
